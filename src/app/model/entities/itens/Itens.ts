@@ -1,3 +1,4 @@
+// arquivos não utilizados (estavam na base do primeiro projeto, que foi utilizado para a criação deste)
 export class Itens {
     private _nome : string;
     private _potencia! : string;
