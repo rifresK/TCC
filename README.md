@@ -1,4 +1,5 @@
-<div style="display: flex; flex-direction: row;">
-  <img src=/assets/imagens/home.png>
-  <img src="cadastrar.png">
-</div>
+![home](https://github.com/rifresK/TCC/assets/142271869/e6e6c4ef-bb0f-4a97-8bd3-2a713c2393cd)
+![login](https://github.com/rifresK/TCC/assets/142271869/77364d63-780d-4571-a846-1b692fcc6823)
+![pecas](https://github.com/rifresK/TCC/assets/142271869/74ad712a-343d-4f97-ba1b-e9c56edee9d9)
+![portifolio](https://github.com/rifresK/TCC/assets/142271869/e3f374e4-878a-4b4a-a47c-34248a3a537f)
+![Sobre](https://github.com/rifresK/TCC/assets/142271869/9162d49b-17bf-434a-b650-2cd28d3f01e2)
