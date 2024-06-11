@@ -10,8 +10,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { CarMarcasComponent } from 'src/app/car-marcas/car-marcas.component';
-import { CarDetailsPageModule } from './car-details/car-details.module'; // Importe o módulo do CarDetailsPage
-import { ModificacoesPageModule } from 'src/app/modificacoes/modificacoes.module'; // Importe o módulo da página de modificações
+import { CarDetailsPageModule } from './car-details/car-details.module'; 
+import { ModificacoesPageModule } from 'src/app/modificacoes/modificacoes.module'; 
 
 @NgModule({
   declarations: [AppComponent, CarMarcasComponent],
@@ -19,8 +19,8 @@ import { ModificacoesPageModule } from 'src/app/modificacoes/modificacoes.module
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    CarDetailsPageModule, // Adicione o módulo do CarDetailsPage aqui
-    ModificacoesPageModule, // Adicione o módulo da página de modificações aqui
+    CarDetailsPageModule,
+    ModificacoesPageModule, 
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireStorageModule,
