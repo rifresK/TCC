@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Modificações</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="modelo">
+  <ion-card>
+    <ion-img src="assets/imagens/modificacoes.png"></ion-img>
+    <ion-card-header>
+      <ion-card-title>Modificações para o {{ modelo.modelo }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="mod-content">
+
+      <ul>
+        <li *ngFor="let mod of modelo.modificacoes">{{ mod }}</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-content *ngIf="!modelo">
+  <p>Modelo não encontrado.</p>
+</ion-content>

@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Gear APP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="login-content">
+  <div class="logo-container">
+    <img src="assets/imagens/logo.png" alt="Logo do aplicativo" class="logo">
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" class="login-form">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Entrar</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <form [formGroup]="logar" (ngSubmit)="submitForm()" novalidate>
+              <ion-item>
+                <ion-label position="floating">Email</ion-label>
+                <ion-input type="email" formControlName="email"></ion-input>
+              </ion-item>
+              <ion-item *ngIf="logar.get('email')?.touched && logar.get('email')?.errors">
+                <ion-text color="danger">
+                  <ion-icon name="alert-circle" slot="start"></ion-icon>
+                  <span *ngIf="logar.get('email')?.errors?.['required']">Email é obrigatório</span>
+                  <span *ngIf="logar.get('email')?.errors?.['email']">Formato de Email Inválido</span>
+                </ion-text>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Senha</ion-label>
+                <ion-input type="password" formControlName="senha"></ion-input>
+              </ion-item>
+              <ion-item *ngIf="logar.get('senha')?.touched && logar.get('senha')?.errors">
+                <ion-text color="danger">
+                  <ion-icon name="alert-circle" slot="start"></ion-icon>
+                  <span *ngIf="logar.get('senha')?.errors?.['required']">Senha é obrigatória</span>
+                  <span *ngIf="logar.get('senha')?.errors?.['minlength']">A senha é de no mínimo 6 caracteres</span>
+                </ion-text>
+              </ion-item>
+              <ion-button expand="full" color="success" type="submit">Entrar</ion-button>
+              <ion-button expand="full" color="medium" (click)="prosseguirSemLogin()">
+                Entrar como convidado
+              </ion-button>
+              <ion-button expand="full" color="danger" (click)="logarComGmail()">
+                Entrar com Google <ion-icon slot="end" name="logo-google"></ion-icon>
+              </ion-button>
+              <ion-button expand="full" color="#171515" (click)="logarComGithub()">
+                Entrar com GitHub <ion-icon slot="end" name="logo-github"></ion-icon>
+              </ion-button>
+
+            </form>
+            <a (click)="irParaRegistrar()">Não tem login? Cadastre-se aqui!</a>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

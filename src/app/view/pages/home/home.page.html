@@ -1,0 +1,91 @@
+<ion-menu contentId="main" side="start">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Eai Gearhead!</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-menu-toggle auto-hide="false">
+        <ion-item (click)="abrirPagina('home')">
+          <ion-icon slot="start" name="home-outline"></ion-icon>
+          <ion-label>Home</ion-label>
+        </ion-item>
+        <ion-item (click)="abrirPagina('logar')">
+          <ion-icon slot="start" name="log-in-outline"></ion-icon>
+          <ion-label>Trocar usuário</ion-label>
+        </ion-item>
+        <ion-item (click)="abrirPagina('sobre')">
+          <ion-icon slot="start" name="information-circle-outline"></ion-icon>
+          <ion-label>Sobre</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title id="title">GearAPP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="main" [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card class="welcome-card">
+          <ion-card-header>
+            <ion-card-title>Bem-vindo ao Beta Test</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Teste e colabore com o melhor aplicativo com informações sobre reprogramações em veiculos atuais.</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12" size-md="6">
+        <ion-card>
+
+          <ion-card-content>
+            <ion-button expand="block" color="primary" (click)="abrirPagina('carmodels')">
+              <ion-icon slot="start" name="car-sport-outline"></ion-icon>
+              Visualizar portifólio
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="12" size-md="6">
+        <ion-card>
+          <ion-img src="assets/imagens/modificacoes.png"></ion-img>
+          <ion-card-content>
+            
+            <ion-button expand="block" color="secondary" (click)="abrirPagina('preparadora')">
+              <ion-icon slot="start" name="construct-outline"></ion-icon>
+              
+              Quem é a preparadora
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+   
+      <ion-row>
+        <ion-col size="12" size-md="6">
+          <ion-card>
+            <ion-img src="assets/imagens/pecas.png"></ion-img>
+            <ion-card-content>
+              <ion-button expand="block" color="secondary" (click)="abrirInfoModificacoes()">
+                <ion-icon slot="start" name="construct-outline"></ion-icon>
+                PEÇAS
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+  

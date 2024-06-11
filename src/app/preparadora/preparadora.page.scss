@@ -1,0 +1,31 @@
+/* No arquivo preparadora.page.scss */
+ion-header {
+    --background: #222;
+    --color: #fff;
+  }
+  
+  ion-card {
+    background-color: #333;
+    color: #fff;
+    margin: 16px;
+  }
+  
+  ion-card-header {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  ion-card-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  ion-card-content p {
+    font-size: 16px;
+  }
+  
+  ion-button {
+    --background: #666;
+    --color: #fff;
+  }
+  
